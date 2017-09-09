@@ -4,3 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp
+
+HEADERS += \
+    order.h \
+    user.h \
+    customer.h \
+    vendor.h \
+    product.h
