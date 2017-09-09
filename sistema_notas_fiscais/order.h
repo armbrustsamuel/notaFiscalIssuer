@@ -16,7 +16,11 @@ private:
     Vendor vendor;
 public:
     //constructor
-    Order(){};
+    Order(char * date, Vendor vend, Customer cust){};
+
+    //transactional
+    void addItems(Product * items);
+    void addTotalValue(float value);
 
     //getters
     Customer getCustomer(){};
