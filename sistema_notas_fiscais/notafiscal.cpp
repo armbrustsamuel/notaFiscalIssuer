@@ -20,3 +20,7 @@ void NotaFiscal::Issue(){
     //print
     cout << "Nota" << endl;
 }
+
+void NotaFiscal::display(){
+
+}

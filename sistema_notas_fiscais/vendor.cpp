@@ -23,3 +23,9 @@ char * Vendor::getVendorCode(){
 void Vendor::setVendorCode(char *code){
     strcpy(vendorCode,code);
 }
+
+void Vendor::display(){
+    cout << "Id:" << getId() << endl;
+    cout << "Name:" << getName() << endl;
+    cout << "Vendor code:" << getVendorCode() << endl;
+}

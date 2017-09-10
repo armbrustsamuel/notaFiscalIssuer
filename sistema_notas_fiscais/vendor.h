@@ -21,6 +21,8 @@ public:
 
     //setters
     void setVendorCode(char * code);
+
+    virtual void display();
 };
 
 #endif // VENDOR_H

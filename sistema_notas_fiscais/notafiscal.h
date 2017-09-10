@@ -24,6 +24,8 @@ public:
     Order *getSales();
     //setters
     void addSale(Order sale);
+
+    virtual void display();
 };
 
 #endif // NOTAFISCAL_H

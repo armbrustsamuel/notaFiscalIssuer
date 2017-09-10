@@ -32,3 +32,10 @@ void Customer::setAddress(char *adr){
 void Customer::setCpf(char *code){
     strcpy(cpf, code);
 }
+
+void Customer::display(){
+    cout << "Id:" << getId() << endl;
+    cout << "Name:" << getName() << endl;
+    cout << "CPF:" << getCpf() << endl;
+    cout << "Address:" << getAddress() << endl;
+}

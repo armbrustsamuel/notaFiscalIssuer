@@ -25,6 +25,8 @@ public:
     //getters
     char * getCpf();
     char * getAddress();
+
+    virtual void display();
 };
 
 #endif // CUSTOMER_H
