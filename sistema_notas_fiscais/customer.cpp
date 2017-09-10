@@ -10,18 +10,25 @@ Customer::Customer(char *cpf, char *adr, int id, char *name):
         setCpf(cpf);
 }
 
-Customer::getAddress(){
+//Customer::Customer(Customer cust){
+//    setAddress(cust.getAddress());
+//    setCpf(cust.getCpf());
+//    setId(cust.getId());
+//    setName(cust.getName());
+//}
+
+char * Customer::getAddress(){
     return address;
 }
 
-Customer::getCpf(){
+char * Customer::getCpf(){
     return cpf;
 }
 
-Customer::setAddress(char *adr){
+void Customer::setAddress(char *adr){
     strcpy(address, adr);
 }
 
-Customer::setCpf(char *code){
+void Customer::setCpf(char *code){
     strcpy(cpf, code);
 }

@@ -12,16 +12,18 @@ private:
 
 public:
     //constructor
-    Product(int qty, float price, char * name){};
+    Product();
+    Product(Product *prod);
+    Product(int qty, float price, char * name);
 
     //getters
-    int getQuantity(){};
-    float getPrice(){};
-    char * getItemName(){};
+    int getQuantity();
+    float getPrice();
+    char * getItemName();
 
     //setters
-    void setQuantity(int qty){};
-    void setPrice(float prce){};
-    void setItemName(char * name){};
-}
+    void setQuantity(int qty);
+    void setPrice(float prce);
+    void setItemName(char * name);
+};
 #endif // PRODUCT_H

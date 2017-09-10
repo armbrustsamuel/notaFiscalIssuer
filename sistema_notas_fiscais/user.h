@@ -12,15 +12,16 @@ protected:
     char name[20];
 public:
     //constructor
-    User(int id, char *name){};
+    User();
+    User(int id, char *name);
 
     //getters
-    char * getName(){};
-    int getId(){};
+    char * getName();
+    int getId();
 
     //setters
-    void setName(char *name){};
-    void setId(int id){};
-}
+    void setName(char *name);
+    void setId(int id);
+};
 
 #endif // USER_H

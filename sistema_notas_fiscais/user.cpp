@@ -4,18 +4,23 @@
 
 using namespace std;
 
-User::getId(){
+User::User(int id, char *name){
+    setId(id);
+    setName(name);
+}
+
+int User::getId(){
     return id;
 }
 
-User::getName(){
+char * User::getName(){
     return name;
 }
 
-User::setId(int code){
+void User::setId(int code){
     id = code;
 }
 
-User::setName(char *nam){
+void User::setName(char *nam){
     strcpy(name, nam);
 }

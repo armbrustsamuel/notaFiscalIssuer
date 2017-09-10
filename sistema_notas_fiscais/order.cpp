@@ -1,45 +1,54 @@
 #include <iostream>
 #include <string.h>
 #include "order.h"
+#include "customer.h"
+#include "vendor.h"
 
 using namespace std;
 
-Order::addItems(Product item){
-    strcpy(items, item);
+Order::Order(char *date, Customer cust, Vendor vend, Product prod){
+    setCustomer(cust);
+    setVendor(vend);
+    setDate(date);
+    addItems(&prod);
 }
 
-Order::addTotalValue(float value){
+void Order::addItems(Product * itemList){
+    items[index++] = itemList;
+}
+
+void Order::addTotalValue(float value){
     totPrice+=value;
 }
 
-Order::getCustomer(){
+Customer Order::getCustomer(){
     return customer;
 }
 
-Order::getDate(){
+char * Order::getDate(){
     return date;
 }
 
-Order::getTotPrice(){
+float Order::getTotPrice(){
     return totPrice;
 }
 
-Order::getVendor(){
+Vendor Order::getVendor(){
     return vendor;
 }
 
-Order::setCustomer(Customer cus){
-    strcpy(customer, cus);
+void Order::setCustomer(Customer cus){
+    customer = cus;
 }
 
-Order::setDate(char *dt){
+void Order::setDate(char *dt){
     strcpy(date, dt);
 }
 
-Order::setTotPrice(float tot){
+void Order::setTotPrice(float tot){
     totPrice = tot;
 }
 
-Order::setVendor(Vendor ven){
-    strcpy(vendor, ven);
+void Order::setVendor(Vendor ven){
+    vendor = ven;
 }

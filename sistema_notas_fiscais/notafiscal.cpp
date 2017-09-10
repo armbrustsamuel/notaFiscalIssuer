@@ -5,18 +5,19 @@
 
 using namespace std;
 
-NotaFiscal::addSale(Order sale){
-
+void NotaFiscal::addSale(Order sale){
+    sales[index++] = sale;
 }
 
-NotaFiscal::getSales(){
+Order * NotaFiscal::getSales(){
     return sales;
 }
 
-NotaFiscal::Issue(){
+void NotaFiscal::Issue(){
     //print
+
 }
 
-NotaFiscal::NotaFiscal(Order * sales){
-
+NotaFiscal::NotaFiscal(Order sale){
+    sales[index++] = sale;
 }

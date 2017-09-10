@@ -4,26 +4,38 @@
 
 using namespace std;
 
-Product::getItemName(){
+Product::Product(int qty, float price, char *name){
+    setItemName(name);
+    setPrice(price);
+    setQuantity(qty);
+}
+
+Product::Product(Product *prod){
+    setItemName(prod->getItemName());
+    setPrice(prod->getPrice());
+    setQuantity(prod->getQuantity());
+}
+
+char * Product::getItemName(){
     return itemName;
 }
 
-Product::getPrice(){
+float Product::getPrice(){
     return price;
 }
 
-Product::getQuantity(){
+int Product::getQuantity(){
     return quantity;
 }
 
-Product::setItemName(char * name){
+void Product::setItemName(char * name){
     strcpy(itemName, name);
 }
 
-Product::setPrice(float prce){
+void Product::setPrice(float prce){
     price = prce;
 }
 
-Product::setQuantity(int qty){
+void Product::setQuantity(int qty){
     quantity = qty;
 }

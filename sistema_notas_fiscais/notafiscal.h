@@ -7,18 +7,20 @@
 
 class NotaFiscal{
 private:
-    Order sales[];
+    int index=0;
+    Order sales[10];
 public:
     //constructor
-    NotaFiscal(Order * sales){};
+    NotaFiscal();
+    NotaFiscal(Order sales);
 
     //transactional
-    void Issue(){};
+    void Issue();
 
     //getters
-    Order * getSales(){};
+    Order * getSales();
     //setters
     void addSale(Order sale);
-}
+};
 
 #endif // NOTAFISCAL_H

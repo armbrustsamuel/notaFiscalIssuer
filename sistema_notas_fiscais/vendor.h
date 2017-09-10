@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string.h>
+#include "user.h"
 
 #ifndef VENDOR_H
 #define VENDOR_H
@@ -9,13 +10,15 @@ private:
     char vendorCode[15];
 public:
     //constructor
-    Vendor(char *code, int id, char * name){};
+//    Vendor(Vendor vend);
+    Vendor();
+    Vendor(char *code, int id, char * name);
 
     //getters
-    char * getVendorCode(){};
+    char * getVendorCode();
 
     //setters
-    void setVendorCode(char * code){};
-}
+    void setVendorCode(char * code);
+};
 
 #endif // VENDOR_H

@@ -4,15 +4,22 @@
 
 using namespace std;
 
+//Vendor::Vendor(Vendor vend):
+//    User(vend.getId(),vend.getName()){
+//        setId(vend.getId());
+//        setName(vend.getName());
+//        setVendorCode(vend.getVendorCode());
+//}
+
 Vendor::Vendor(char *code, int id, char * name):
     User(id, name){
         setVendorCode(code);
 }
 
-Vendor::getVendorCode(){
+char * Vendor::getVendorCode(){
     return vendorCode;
 }
 
-Vendor::setVendorCode(char *code){
+void Vendor::setVendorCode(char *code){
     strcpy(vendorCode,code);
 }
