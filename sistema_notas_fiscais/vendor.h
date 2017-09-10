@@ -2,6 +2,8 @@
 #include <string.h>
 #include "user.h"
 
+using namespace std;
+
 #ifndef VENDOR_H
 #define VENDOR_H
 
@@ -11,7 +13,7 @@ private:
 public:
     //constructor
 //    Vendor(Vendor vend);
-    Vendor();
+    Vendor(){};
     Vendor(char *code, int id, char * name);
 
     //getters

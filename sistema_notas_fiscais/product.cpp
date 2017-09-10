@@ -10,11 +10,11 @@ Product::Product(int qty, float price, char *name){
     setQuantity(qty);
 }
 
-Product::Product(Product *prod){
-    setItemName(prod->getItemName());
-    setPrice(prod->getPrice());
-    setQuantity(prod->getQuantity());
-}
+//Product::Product(Product *prod){
+//    setItemName(prod->getItemName());
+//    setPrice(prod->getPrice());
+//    setQuantity(prod->getQuantity());
+//}
 
 char * Product::getItemName(){
     return itemName;

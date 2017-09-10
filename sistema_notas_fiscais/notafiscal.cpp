@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string.h>
 #include "notafiscal.h"
-#include "order.h"
 
 using namespace std;
+
+NotaFiscal::NotaFiscal(Order sale){
+    sales[index++] = sale;
+}
 
 void NotaFiscal::addSale(Order sale){
     sales[index++] = sale;
@@ -15,9 +18,5 @@ Order * NotaFiscal::getSales(){
 
 void NotaFiscal::Issue(){
     //print
-
-}
-
-NotaFiscal::NotaFiscal(Order sale){
-    sales[index++] = sale;
+    cout << "Nota" << endl;
 }

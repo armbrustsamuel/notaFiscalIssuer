@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string.h>
 
+using namespace std;
+
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
@@ -12,8 +14,8 @@ private:
 
 public:
     //constructor
-    Product();
-    Product(Product *prod);
+    Product(){};
+//    Product(Product *prod);
     Product(int qty, float price, char * name);
 
     //getters

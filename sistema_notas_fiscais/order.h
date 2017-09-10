@@ -4,6 +4,8 @@
 #include "vendor.h"
 #include "customer.h"
 
+using namespace std;
+
 #ifndef ORDER_H
 #define ORDER_H
 
@@ -15,13 +17,14 @@ private:
     Product items[4];
     Customer customer;
     Vendor vendor;
+
 public:
     //constructor
-    Order();
+    Order(){};
     Order(char *date, Customer cust, Vendor vend, Product prod);
 
     //transactional
-    void addItems(Product * itemList);
+    void addItems(Product itemList);
     void addTotalValue(float value);
 
     //getters

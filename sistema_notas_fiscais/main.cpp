@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string.h>
+#include "notafiscal.h"
+#include "product.h"
 #include "vendor.h"
 #include "customer.h"
 #include "order.h"
@@ -15,14 +17,14 @@ int main()
     char code[14];
     char productName[15];
 
-    cin >> cpf ;
+    cin >> cpf;
     cin >> address;
     cin >> customer;
     cin >> vendor;
     cin >> code;
     cin >> productName;
 
-//    Customer cust(cpf, address, 3, customer);
+    Customer cust(3, cpf, address, customer);
 //    Vendor vend(code, 5, vendor);
 //    Product prod1(30, 1456.65, productName);
 

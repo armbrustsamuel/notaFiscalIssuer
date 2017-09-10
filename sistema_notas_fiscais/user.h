@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string.h>
 
+using namespace std;
+
 #ifndef USER_H
 #define USER_H
 
@@ -10,9 +12,10 @@ class User {
 protected:
     int id;
     char name[20];
+
 public:
     //constructor
-    User();
+    User(){};
     User(int id, char *name);
 
     //getters

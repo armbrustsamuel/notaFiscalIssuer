@@ -10,11 +10,11 @@ Order::Order(char *date, Customer cust, Vendor vend, Product prod){
     setCustomer(cust);
     setVendor(vend);
     setDate(date);
-    addItems(&prod);
+    addItems(prod);
 }
 
-void Order::addItems(Product * itemList){
-    items[index++] = itemList;
+void Order::addItems(Product itemList){
+    //items[index++] = itemList;
 }
 
 void Order::addTotalValue(float value){
@@ -25,6 +25,10 @@ Customer Order::getCustomer(){
     return customer;
 }
 
+Vendor Order::getVendor(){
+    return vendor;
+}
+
 char * Order::getDate(){
     return date;
 }
@@ -33,12 +37,12 @@ float Order::getTotPrice(){
     return totPrice;
 }
 
-Vendor Order::getVendor(){
-    return vendor;
-}
-
 void Order::setCustomer(Customer cus){
     customer = cus;
+}
+
+void Order::setVendor(Vendor ven){
+    vendor = ven;
 }
 
 void Order::setDate(char *dt){
@@ -47,8 +51,4 @@ void Order::setDate(char *dt){
 
 void Order::setTotPrice(float tot){
     totPrice = tot;
-}
-
-void Order::setVendor(Vendor ven){
-    vendor = ven;
 }

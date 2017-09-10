@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Customer::Customer(char *cpf, char *adr, int id, char *name):
+Customer::Customer(int id, char *cpf, char *adr, char *name):
     User(id, name){
         setAddress(adr);
         setCpf(cpf);
