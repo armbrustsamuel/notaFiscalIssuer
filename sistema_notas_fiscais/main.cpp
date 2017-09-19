@@ -1,15 +1,12 @@
-#include <iostream>
-#include <string.h>
-#include "notafiscal.h"
-#include "product.h"
-#include "vendor.h"
-#include "customer.h"
-#include "order.h"
+#include "main.h"
 
 using namespace std;
 
 int main()
 {
+
+    setlocale(LC_ALL, "Portuguese");
+
     char cpf[15];
     char address[15];
     char customer[15];
@@ -20,7 +17,7 @@ int main()
 
     cout << "Digite CPF:" << endl;
     cin >> cpf;
-    cout << "Digite Enrereco:" << endl;
+    cout << "Digite Enrereço:" << endl;
     cin >> address;
     cout << "Digite o cliente:" << endl;
     cin >> customer;
@@ -28,23 +25,33 @@ int main()
     cin >> vendor;
     cout << "Digite codigo de sua empresa:" << endl;
     cin >> code;
-    cout << "Digite nome do produto:" << endl;
-    cin >> productName;
-    cout << "Digite data de emissao:" << endl;
+    cout << "Digite data de emissão:" << endl;
     cin >> date;
 
+    // Create some products
+    Product sushi(50, 1.54, "Sushi");
+    Product carne(100, 45.23, "Carne");
+    Product acogg50(3000, 4.5, "Aco GG 50");
+
+    // Create qty of products
+    itemProduct it1(sushi,4);
+    itemProduct it2(carne,3);
+    itemProduct it3(acogg50, 60);
+
+    // Create Vendor and Customer
     Customer cust(3, cpf, address, customer);
     Vendor vend(code, 5, vendor);
-    Product prod1(30, 1456.65, productName);
 
-    Order ord1(date,cust,vend,prod1);
+    // Create the order
+    Order ord1(date,cust,vend);
+    ord1.addItems(it1);
+    ord1.addItems(it2);
+    ord1.addItems(it3);
 
-    ord1.addItems(prod1);
-
-    cust.display();
-
-    cout << "test" << endl;
+    // Create the Nota Fiscal
+    //ord1.display();
+    NotaFiscal nf01(ord1);
+    nf01.display();
 
     return 0;
-
 }

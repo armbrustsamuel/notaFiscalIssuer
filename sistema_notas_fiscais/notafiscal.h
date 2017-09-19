@@ -10,7 +10,7 @@ using namespace std;
 class NotaFiscal{
 private:
     int index=0;
-    Order sales[10];
+    Order sale;
 
 public:
     //constructor
@@ -21,7 +21,7 @@ public:
     void Issue();
 
     //getters
-    Order *getSales();
+    Order getSales();
     //setters
     void addSale(Order sale);
 

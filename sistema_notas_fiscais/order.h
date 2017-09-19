@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string.h>
-#include "product.h"
+#include "itemProduct.h"
 #include "vendor.h"
 #include "customer.h"
 
@@ -13,21 +13,23 @@ class Order{
 private:
     int index=0;
     float totPrice;
-    char date[8];
-    Product items[4];
+    char date[10];
+    itemProduct items[10];
     Customer customer;
     Vendor vendor;
 
 public:
     //constructor
     Order(){};
-    Order(char *date, Customer cust, Vendor vend, Product prod);
+    Order(char *date, Customer cust, Vendor vend);
 
     //transactional
-    void addItems(Product itemList);
+    void addItems(itemProduct itemList);
     void addTotalValue(float value);
 
     //getters
+    itemProduct * getItems();
+    itemProduct getItem(int index);
     Customer getCustomer();
     Vendor getVendor();
     char * getDate();
@@ -38,6 +40,8 @@ public:
     void setVendor(Vendor ven);
     void setDate(char *dt);
     void setTotPrice(float tot);
+
+    virtual void display();
 };
 
 #endif // ORDER_H

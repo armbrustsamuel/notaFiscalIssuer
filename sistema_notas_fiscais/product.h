@@ -15,7 +15,6 @@ private:
 public:
     //constructor
     Product(){};
-//    Product(Product *prod);
     Product(int qty, float price, char * name);
 
     //getters
@@ -27,5 +26,7 @@ public:
     void setQuantity(int qty);
     void setPrice(float prce);
     void setItemName(char * name);
+
+    virtual void display();
 };
 #endif // PRODUCT_H

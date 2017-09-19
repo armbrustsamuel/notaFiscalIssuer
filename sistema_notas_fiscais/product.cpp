@@ -39,3 +39,9 @@ void Product::setPrice(float prce){
 void Product::setQuantity(int qty){
     quantity = qty;
 }
+
+void Product::display(){
+    cout << "Product name:" << getItemName()<< endl;
+    cout << "Product price:" << getPrice()<< endl;
+    cout << "Product quantity:" << getQuantity() << endl;
+}

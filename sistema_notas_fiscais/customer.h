@@ -15,7 +15,6 @@ private:
 public:
     //constructor
     Customer(){};
-//    Customer(Customer *cust);
     Customer(int id, char *cpf, char *adr, char *name);
 
     //setters

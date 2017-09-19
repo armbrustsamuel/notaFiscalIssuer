@@ -9,7 +9,8 @@ SOURCES += main.cpp \
     product.cpp \
     order.cpp \
     customer.cpp \
-    notafiscal.cpp
+    notafiscal.cpp \
+    itemproduct.cpp
 
 HEADERS += \
     order.h \
@@ -17,4 +18,6 @@ HEADERS += \
     customer.h \
     vendor.h \
     product.h \
-    notafiscal.h
+    notafiscal.h \
+    itemproduct.h \
+    main.h
