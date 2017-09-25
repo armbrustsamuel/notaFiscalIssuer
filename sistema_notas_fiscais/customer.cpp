@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Customer::Customer(int id, char *cpf, char *adr, char *name):
+Customer::Customer(int id, String cpf, String adr, String name):
     User(id, name){
         setAddress(adr);
         setCpf(cpf);
@@ -25,11 +25,11 @@ char * Customer::getCpf(){
     return cpf;
 }
 
-void Customer::setAddress(char *adr){
+void Customer::setAddress(String adr){
     strcpy(address, adr);
 }
 
-void Customer::setCpf(char *code){
+void Customer::setCpf(String code){
     strcpy(cpf, code);
 }
 
