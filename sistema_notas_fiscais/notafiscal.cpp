@@ -22,7 +22,7 @@ void NotaFiscal::Issue(){
 
 void NotaFiscal::display(){
     cout << "||\t ***** \t ***** \t ***** \t ***** \t ***** \t||" << endl;
-    cout << "||\t ***** \t ***** Nota Fiscal ***** \t ***** \t||" << endl;
+    cout << "||\t ***** \t *****Nota Fiscal***** \t ***** \t||" << endl;
     cout << "||\t ***** \t ***** \t ***** \t ***** \t ***** \t||" << endl;
     cout << "||\tData Emissão: " << getSales().getDate() << "\t\t\t\t||" << endl;
 

@@ -34,13 +34,13 @@ int main()
     Product acogg50(3000, 4.5, "Aco GG 50");
 
     // Create qty of products
-    itemProduct it1(sushi,4);
-    itemProduct it2(carne,3);
+    itemProduct it1(sushi, 4);
+    itemProduct it2(carne, 3);
     itemProduct it3(acogg50, 60);
 
     // Create Vendor and Customer
     Customer cust(3, cpf, address, customer);
-    Vendor vend(code, 5, vendor);
+    Vendor vend(5, vendor, code);
 
     // Create the order
     Order ord1(date,cust,vend);

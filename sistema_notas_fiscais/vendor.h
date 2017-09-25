@@ -14,7 +14,7 @@ public:
     //constructor
 //    Vendor(Vendor vend);
     Vendor(){};
-    Vendor(char *code, int id, char * name);
+    Vendor(int id, char * name, char * code);
 
     //getters
     char * getVendorCode();
