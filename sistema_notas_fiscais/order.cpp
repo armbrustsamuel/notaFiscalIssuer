@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Order::Order(char *date, Customer cust, Vendor vend){
+Order::Order(string date, Customer cust, Vendor vend){
     setCustomer(cust);
     setVendor(vend);
     setDate(date);
@@ -37,7 +37,7 @@ Vendor Order::getVendor(){
     return vendor;
 }
 
-char * Order::getDate(){
+string Order::getDate(){
     return date;
 }
 
@@ -53,8 +53,9 @@ void Order::setVendor(Vendor ven){
     vendor = ven;
 }
 
-void Order::setDate(char *dt){
-    strcpy(date, dt);
+void Order::setDate(string dt){
+//    strcpy(date, dt);
+    date = dt;
 }
 
 void Order::setTotPrice(float tot){

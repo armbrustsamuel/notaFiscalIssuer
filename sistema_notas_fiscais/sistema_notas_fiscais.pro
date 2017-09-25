@@ -2,6 +2,7 @@ TEMPLATE = app
 CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
+QMAKE_MAC_SDK = macosx10.11
 
 SOURCES += main.cpp \
     vendor.cpp \

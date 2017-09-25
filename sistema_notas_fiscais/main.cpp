@@ -7,16 +7,16 @@ int main()
 
     setlocale(LC_ALL, "Portuguese");
 
-    char cpf[15];
-    char address[15];
-    char customer[15];
-    char vendor[15];
-    char code[14];
-    char productName[15];
-    char date[8];
+    string cpf;
+    string address;
+    string customer;
+    string vendor;
+    string code;
+    string productName;
+    string date;
 
     cout << "Digite CPF:" << endl;
-    cin >> cpf;
+    getline(cin, cpf);
     cout << "Digite Enrereço:" << endl;
     cin >> address;
     cout << "Digite o cliente:" << endl;

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-User::User(int id, char *name){
+User::User(int id, string name){
     setId(id);
     setName(name);
 }
@@ -13,7 +13,7 @@ int User::getId(){
     return id;
 }
 
-char * User::getName(){
+string User::getName(){
     return name;
 }
 
@@ -21,6 +21,7 @@ void User::setId(int code){
     id = code;
 }
 
-void User::setName(char *nam){
-    strcpy(name, nam);
+void User::setName(string nam){
+    //strcpy(name, nam);
+    name = nam;
 }

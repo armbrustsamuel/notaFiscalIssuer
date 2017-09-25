@@ -9,18 +9,18 @@ using namespace std;
 
 class Vendor: public User{
 private:
-    char vendorCode[15];
+    string vendorCode;
 public:
     //constructor
 //    Vendor(Vendor vend);
     Vendor(){};
-    Vendor(int id, char * name, char * code);
+    Vendor(int id, string name, string code);
 
     //getters
-    char * getVendorCode();
+    string getVendorCode();
 
     //setters
-    void setVendorCode(char * code);
+    void setVendorCode(string code);
 
     virtual void display();
 };

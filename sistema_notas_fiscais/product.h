@@ -10,22 +10,22 @@ class Product {
 private:
     int quantity;
     float price;
-    char itemName[20];
+    string itemName;
 
 public:
     //constructor
     Product(){};
-    Product(int qty, float price, char * name);
+    Product(int qty, float price, string name);
 
     //getters
     int getQuantity();
     float getPrice();
-    char * getItemName();
+    string getItemName();
 
     //setters
     void setQuantity(int qty);
     void setPrice(float prce);
-    void setItemName(char * name);
+    void setItemName(string name);
 
     virtual void display();
 };

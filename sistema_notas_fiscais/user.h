@@ -11,19 +11,19 @@ using namespace std;
 class User {
 protected:
     int id;
-    char name[20];
+    string name;
 
 public:
     //constructor
     User(){};
-    User(int id, char *name);
+    User(int id, string name);
 
     //getters
-    char * getName();
+    string getName();
     int getId();
 
     //setters
-    void setName(char *name);
+    void setName(string name);
     void setId(int id);
 };
 

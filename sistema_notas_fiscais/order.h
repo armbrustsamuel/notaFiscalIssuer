@@ -13,7 +13,7 @@ class Order{
 private:
     int index=0;
     float totPrice;
-    char date[10];
+    string date;
     itemProduct items[10];
     Customer customer;
     Vendor vendor;
@@ -21,7 +21,7 @@ private:
 public:
     //constructor
     Order(){};
-    Order(char *date, Customer cust, Vendor vend);
+    Order(string date, Customer cust, Vendor vend);
 
     //transactional
     void addItems(itemProduct itemList);
@@ -32,13 +32,13 @@ public:
     itemProduct getItem(int index);
     Customer getCustomer();
     Vendor getVendor();
-    char * getDate();
+    string getDate();
     float getTotPrice();
 
     //setters
     void setCustomer(Customer cus);
     void setVendor(Vendor ven);
-    void setDate(char *dt);
+    void setDate(string dt);
     void setTotPrice(float tot);
 
     virtual void display();

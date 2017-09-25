@@ -11,17 +11,17 @@ using namespace std;
 //        setVendorCode(vend.getVendorCode());
 //}
 
-Vendor::Vendor(int id, char * name, char *code):
+Vendor::Vendor(int id, string name, string code):
     User(id, name){
         setVendorCode(code);
 }
 
-char * Vendor::getVendorCode(){
+string Vendor::getVendorCode(){
     return vendorCode;
 }
 
-void Vendor::setVendorCode(char *code){
-    strcpy(vendorCode, code);
+void Vendor::setVendorCode(string code){
+    vendorCode = code;
 }
 
 void Vendor::display(){

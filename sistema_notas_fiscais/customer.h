@@ -9,21 +9,21 @@ using namespace std;
 
 class Customer: public User {
 private:
-    char cpf[9];
-    char address[15];
+    string cpf;
+    string address;
 
 public:
     //constructor
     Customer(){};
-    Customer(int id, char *cpf, char *adr, char *name);
+    Customer(int id, string cpf, string adr, string name);
 
     //setters
-    void setCpf(char *code);
-    void setAddress(char *adr);
+    void setCpf(string code);
+    void setAddress(string adr);
 
     //getters
-    char * getCpf();
-    char * getAddress();
+    string getCpf();
+    string getAddress();
 
     virtual void display();
 };

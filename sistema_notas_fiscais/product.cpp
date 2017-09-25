@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Product::Product(int qty, float price, char *name){
+Product::Product(int qty, float price, string name){
     setItemName(name);
     setPrice(price);
     setQuantity(qty);
@@ -16,7 +16,7 @@ Product::Product(int qty, float price, char *name){
 //    setQuantity(prod->getQuantity());
 //}
 
-char * Product::getItemName(){
+string Product::getItemName(){
     return itemName;
 }
 
@@ -28,8 +28,9 @@ int Product::getQuantity(){
     return quantity;
 }
 
-void Product::setItemName(char * name){
-    strcpy(itemName, name);
+void Product::setItemName(string name){
+//    strcpy(itemName, name);
+    itemName = name;
 }
 
 void Product::setPrice(float prce){
